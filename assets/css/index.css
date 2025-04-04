@@ -42,6 +42,10 @@ body {
 
 /* header style  */
 
+.hero_text {
+  color: lightgrey;
+}
+
 .header_background {
   background: var(--secondary_color);
 }
