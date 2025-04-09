@@ -12,6 +12,35 @@ body {
   font-style: normal;
 }
 
+.offcanvas {
+  height: 80vh;
+  background-color: var(--secondary_color);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.close_canvas_icon {
+  font-size: 22px;
+  color: var(--primary_color);
+}
+
+.canvas_logo {
+  height: 170px;
+  width: 170px;
+  object-fit: contain;
+}
+
+.canvas_list_icon {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .section_spacing {
   margin-top: 140px;
 }
@@ -125,6 +154,12 @@ body {
 .read_more_btn {
   background-color: var(--secondary_color);
   border: 1px solid var(--secondary_color);
+}
+
+.ceo_name {
+  font-style: italic;
+  color: white;
+  font-weight: 600;
 }
 
 /* why choose us style  */

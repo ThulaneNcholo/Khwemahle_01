@@ -41,6 +41,9 @@
     <!-- Index CSS  -->
     <link rel="stylesheet" href="assets/css/index.css" />
 
+    <!-- About CSS  -->
+    <link rel="stylesheet" href="assets/css/about.css" />
+
     <style>
       .banner {
         width: 100%; /* Adjust width as needed */
@@ -102,49 +105,101 @@
   <body>
     <!-- ======= Navbar  ======= -->
     <nav
-      class="navbar navbar-expand-lg navbar-light header_background fixed-top"
+      class="navbar navbar-expand-lg navbar-light header_background fixed-top pt-3"
     >
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img src="assets/images/KM_logo.png" alt="" class="navbar_image" />
           <h6 class="mb-0 text-white fw-bold">Khwemahle</h6>
         </a>
         <button
           class="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
         >
           <i class="bi bi-list navbar_menu"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link text-light active" aria-current="page" href="#"
+              <a
+                class="nav-link text-light active"
+                aria-current="page"
+                href="index.html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">About</a>
+              <a class="nav-link text-light" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Services</a>
+              <a class="nav-link text-light" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Contact</a>
+              <a class="nav-link text-light" href="contact.html">Contact</a>
             </li>
           </ul>
           <div class="d-flex">
-            <button class="btn navbar_btn px-5 rounded-pill fw-bold">
-              Get In Touch
-            </button>
+            <a href="contact.html">
+              <button class="btn navbar_btn px-5 rounded-pill fw-bold">
+                Get In Touch
+              </button>
+            </a>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- ======= Offcavas menu  ======= -->
+    <div
+      class="offcanvas offcanvas-bottom"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+
+        <a data-bs-dismiss="offcanvas">
+          <i class="bi bi-x-lg text-white close_canvas_icon"></i>
+        </a>
+      </div>
+      <div class="offcanvas-body">
+        <center>
+          <img src="assets/images/kLogo.png" alt="" class="canvas_logo mb-4" />
+        </center>
+        <a href="index.html">
+          <div class="d-flex justify-content-center mb-4">
+            <i class="bi bi-house text-white canvas_list_icon"></i>
+            <h5 class="mb-0 text-white">Home</h5>
+          </div>
+        </a>
+        <!-- end item  -->
+        <a href="about.html">
+          <div class="d-flex justify-content-center mb-4">
+            <i class="bi bi-buildings text-white canvas_list_icon"></i>
+            <h5 class="mb-0 text-white">About</h5>
+          </div>
+        </a>
+        <!-- end item  -->
+        <a href="services.html">
+          <div class="d-flex justify-content-center mb-4">
+            <i class="bi bi-gear text-white canvas_list_icon"></i>
+            <h5 class="mb-0 text-white">Services</h5>
+          </div>
+        </a>
+        <!-- end item  -->
+        <a href="contact.html">
+          <div class="d-flex justify-content-center mb-4">
+            <i class="bi bi-telephone text-white canvas_list_icon"></i>
+            <h5 class="mb-0 text-white">Contact</h5>
+          </div>
+        </a>
+        <!-- end item  -->
+      </div>
+    </div>
 
     <!-- ======= Hero component  ======= -->
     <section class="header_background hero_card">
@@ -173,19 +228,20 @@
               data-aos-delay="50"
               data-aos-duration="2000"
             >
-              Khwemahle is a Female Black-Owned HR, Training, and Labour Law
-              company dedicated to empowering South African businesses with
-              tailored solutions that drive growth, compliance, and real impact.
-              Partner with us for workforce transformation that lasts
+              KHWEMAHLE is a wholly transformed company that specialises in
+              Human Resources Management, Learning and Development, Labour Law
+              and other tailored Training Services.
             </p>
-            <button
-              class="btn btn-light header_btn rounded-pill px-5 shadow mt-4"
-              data-aos="fade-right"
-              data-aos-delay="50"
-              data-aos-duration="2500"
-            >
-              contact us
-            </button>
+            <a href="contact.html">
+              <button
+                class="btn btn-light header_btn rounded-pill px-5 shadow mt-4"
+                data-aos="fade-right"
+                data-aos-delay="50"
+                data-aos-duration="2500"
+              >
+                contact us
+              </button>
+            </a>
           </div>
           <div class="col-12 col-md-6 mb-5">
             <div class="row overflow_content">
@@ -237,7 +293,7 @@
     </section>
 
     <!-- ======= summarized services  ======= -->
-    <section class="container section_spacing">
+    <section class="container section_spacing overflow_content">
       <div class="row overflow_content">
         <div
           class="col-12 col-md-4 mb-4"
@@ -254,14 +310,12 @@
               </div>
             </div>
             <div class="col">
-              <h5 class="poppins_headings service_heading">
-                Human Resources Solutions
-              </h5>
+              <h5 class="poppins_headings service_heading">Human Resources</h5>
               <p class="text-secondary">
-                We understand that effective HR management is the backbone of a
-                thriving organization. Khwemahle provides comprehensive HR
-                solutions tailored to meet the dynamic needs of today’s
-                workplaces
+                Strategic HR support to optimize your workforce — from policy
+                development and performance management to recruitment, job
+                analysis, and change management. We help organizations build
+                people-first solutions that work.
               </p>
             </div>
           </div>
@@ -282,13 +336,12 @@
               </div>
             </div>
             <div class="col">
-              <h5 class="poppins_headings service_heading">
-                Labour Law Expertise
-              </h5>
+              <h5 class="poppins_headings service_heading">Labour Law</h5>
               <p class="text-secondary">
-                Navigating labour law can be complex. Khwemahle’s experts offer
-                in-depth legal support to ensure compliance and facilitate fair
-                workplace practices
+                Expert legal guidance and representation for all labour-related
+                matters — including disciplinary hearings, CCMA cases, wage
+                negotiations, and collective bargaining. We protect your
+                business while ensuring compliance and fairness.
               </p>
             </div>
           </div>
@@ -310,17 +363,31 @@
             </div>
             <div class="col">
               <h5 class="poppins_headings service_heading">
-                Learning & Development
+                Workplace Training
               </h5>
               <p class="text-secondary">
-                We provide tailored training programs focused on individual
-                growth, skill enhancement, and compliance with South African
-                regulations
+                Empowering your teams with tailored training solutions. We
+                develop and deliver courses in employment equity, health &
+                safety, labour law, and more — helping you build a knowledgeable
+                and compliant workforce.
               </p>
             </div>
           </div>
         </div>
       </div>
+
+      <center>
+        <a href="services.html">
+          <button
+            class="btn btn-dark px-5 rounded-pill py-3 shadow-sm read_more_btn mt-4"
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            view all services
+          </button>
+        </a>
+      </center>
     </section>
 
     <!-- ======= About  ======= -->
@@ -328,7 +395,7 @@
       <div class="row mb-5 overflow_content">
         <div
           class="col-8"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-delay="50"
           data-aos-duration="1000"
         >
@@ -340,7 +407,7 @@
         </div>
         <div
           class="col-4"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-delay="50"
           data-aos-duration="1000"
         >
@@ -368,30 +435,33 @@
             data-aos-delay="50"
             data-aos-duration="1500"
           >
-            Shaping the Future of Workforce Development
+            Empowering Workplaces Through HR Excellence and Transformation
           </h1>
           <p data-aos="fade-right" data-aos-delay="50" data-aos-duration="2000">
-            Khwemahle is a proudly Female Black-Owned Human Resources, Training,
-            and Labour Law company dedicated to driving transformation across
-            all sectors in South Africa. Our mission is rooted in creating
-            long-term, sustainable solutions that empower both individuals and
-            organizations.
+            KHWEMAHLE is a proudly transformed South African company,
+            specialising in Human Resources Management, Learning and
+            Development, Labour Law, and customised Workplace Training
+            Solutions.
           </p>
           <p data-aos="fade-right" data-aos-delay="50" data-aos-duration="2000">
-            Through a commitment to skill-building, employee advancement, and
-            organizational growth, we provide expert services that align with
-            our clients' human resource and transformation goals. Our solutions
-            are uniquely designed to address real-world challenges, ensuring
-            impactful and effective outcomes.
+            We serve businesses across all sectors, born out of a vision to
+            drive meaningful transformation in the workplace.
           </p>
-          <button
-            class="btn btn-dark px-5 rounded-pill read_more_btn mt-4"
-            data-aos="fade-right"
-            data-aos-delay="50"
-            data-aos-duration="2300"
-          >
-            read more
-          </button>
+          <p data-aos="fade-right" data-aos-delay="50" data-aos-duration="2000">
+            Our mission is to deliver sustainable HR solutions that support
+            organisational growth, promote productivity, drive transformation,
+            and empower employee development.
+          </p>
+          <a href="about.html">
+            <button
+              class="btn btn-dark px-5 rounded-pill read_more_btn mt-4"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="2300"
+            >
+              read more
+            </button>
+          </a>
         </div>
         <div class="col-12 col-md-4 mb-4 overflow_content">
           <img
@@ -419,15 +489,13 @@
           Committed to Your Growth and Transformation
         </h1>
         <p class="text-white">
-          At Khwemahle, we believe in the power of tailored solutions that drive
-          real impact. By blending competitive pricing with a focus on
-          customized workshops, we ensure that our clients receive high-value,
-          practical solutions that meet their unique needs. We are committed to
-          your organization’s growth, from fulfilling your HR strategies to
-          achieving B-BBEE objectives and learning and development goals. Let's
-          work together to build a thriving, capable workforce for a competitive
-          future.
+          At Khwemahle, we’re committed to creating practical, tailored
+          solutions that make a real difference. Through competitive pricing and
+          hands-on, experience-driven workshops, we partner with organizations
+          to achieve their human development goals. Let’s work together to grow
+          your people and your business in today’s evolving world of work.
         </p>
+        <p class="ceo_name">" Precious Maswili "</p>
       </div>
     </section>
 
@@ -436,8 +504,9 @@
       <p class="text-secondary">Why Choose Us</p>
       <h1 class="poppins_headings fw-bold">Why Partner with Khwemahle</h1>
       <p class="mb-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur illo
-        quasi dolorem qui facilis! Consequuntur.
+        At Khwemahle, we deliver tailored, hands-on solutions in HR, Labour Law,
+        and Training — driven by expertise, innovation, and a true commitment to
+        your growth.
       </p>
 
       <div class="row overflow_content pt-4" style="margin-top: 100px">
@@ -550,125 +619,20 @@
             high-performing workforce that drives long-term success and sets
             your business apart for years to come.
           </p>
-          <button
-            class="btn btn-dark px-5 rounded-pill read_more_btn mt-4"
-            data-aos="fade-left"
-            data-aos-delay="50"
-            data-aos-duration="1500"
-          >
-            get in touch
-          </button>
+          <a href="contact.html">
+            <button
+              class="btn btn-dark px-5 rounded-pill read_more_btn mt-4"
+              data-aos="fade-left"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+            >
+              get in touch
+            </button>
+          </a>
         </div>
         <div class="col-12 col-md-2 mb-5">
           <div class="growth_pattern"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- ======= Team  ======= -->
-    <section class="container section_spacing">
-      <p class="text-secondary mb-0">Our Team</p>
-      <h1 class="poppins_headings fw-bold mb-4">Meet Khwemahle Team</h1>
-      <p class="text-secondary">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus
-        laboriosam officia ipsa quas! Explicabo, atque.
-      </p>
-
-      <div class="row mt-5 overflow_content">
-        <div
-          class="col-12 col-md-4 mb-5"
-          data-aos="zoom-in"
-          data-aos-delay="50"
-          data-aos-duration="1500"
-        >
-          <div class="team_card">
-            <div class="p-3 team_name_card mx-2 shadow">
-              <h5 class="poppins_headings" style="font-weight: 600">
-                Dialwa Mathala
-              </h5>
-              <p class="mb-0">22 Years Exp</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-4 mb-5"
-          data-aos="zoom-in"
-          data-aos-delay="50"
-          data-aos-duration="1500"
-        >
-          <div class="team_card">
-            <div class="p-3 team_name_card mx-2 shadow">
-              <h5 class="poppins_headings" style="font-weight: 600">
-                Hope Khoza
-              </h5>
-              <p class="mb-0">20 Years Exp</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-4 mb-5"
-          data-aos="zoom-in"
-          data-aos-delay="50"
-          data-aos-duration="1500"
-        >
-          <div class="team_card">
-            <div class="p-3 team_name_card mx-2 shadow">
-              <h5 class="poppins_headings" style="font-weight: 600">
-                Vela Maswili
-              </h5>
-              <p class="mb-0">19 Years Exp</p>
-            </div>
-          </div>
-        </div>
-        <!-- end col  -->
-        <div
-          class="col-12 col-md-4 mb-5"
-          data-aos="zoom-in"
-          data-aos-delay="50"
-          data-aos-duration="1500"
-        >
-          <div class="team_card">
-            <div class="p-3 team_name_card mx-2 shadow">
-              <h5 class="poppins_headings" style="font-weight: 600">
-                Vuyani Fonte
-              </h5>
-              <p class="mb-0">15 Years Exp</p>
-            </div>
-          </div>
-        </div>
-        <!-- end col  -->
-        <div
-          class="col-12 col-md-4 mb-5"
-          data-aos="zoom-in"
-          data-aos-delay="50"
-          data-aos-duration="1500"
-        >
-          <div class="team_card">
-            <div class="p-3 team_name_card mx-2 shadow">
-              <h5 class="poppins_headings" style="font-weight: 600">
-                Dr.Shamla Naidoo
-              </h5>
-              <p class="mb-0">12 Years Exp</p>
-            </div>
-          </div>
-        </div>
-        <!-- end col  -->
-        <div
-          class="col-12 col-md-4 mb-5"
-          data-aos="zoom-in"
-          data-aos-delay="50"
-          data-aos-duration="1500"
-        >
-          <div class="team_card">
-            <div class="p-3 team_name_card mx-2 shadow">
-              <h5 class="poppins_headings" style="font-weight: 600">
-                Phillip Wilson
-              </h5>
-              <p class="mb-0">12 Years Exp</p>
-            </div>
-          </div>
-        </div>
-        <!-- end col  -->
       </div>
     </section>
 
@@ -699,8 +663,9 @@
               data-aos-delay="50"
               data-aos-duration="1500"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-              provident consectetur voluptatibus odit quia nisi.
+              Sign up for our newsletter and get the latest insights, updates,
+              and expert tips on HR, Labour Law, and Workplace Training —
+              straight to your inbox.
             </p>
           </div>
           <div class="col-12 col-md-6">
@@ -733,8 +698,10 @@
           <div class="col-12 col-md mb-5">
             <h6 class="poppins_headings fw-bold text-white">About Company</h6>
             <p class="text-light">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
-              sunt reiciendis at quia dignissimos ducimus.
+              Khwemahle is a proudly South African consultancy specialising in
+              HR, Labour Law, and Workplace Training. We’re dedicated to driving
+              transformation and empowering organisations through tailored,
+              results-driven solutions.
             </p>
             <div class="d-flex mt-5">
               <i class="bi bi-whatsapp footer_icons"></i>
@@ -746,10 +713,18 @@
           <!-- end col  -->
           <div class="col-12 col-md mb-5">
             <h6 class="poppins_headings fw-bold text-white">Quick Links</h6>
-            <p class="text-light">Home</p>
-            <p class="text-light">About</p>
-            <p class="text-light">Services</p>
-            <p class="text-light">Contact</p>
+            <a href="index.html">
+              <p class="text-light">Home</p>
+            </a>
+            <a href="about.html">
+              <p class="text-light">About</p>
+            </a>
+            <a href="services.html">
+              <p class="text-light">Services</p>
+            </a>
+            <a href="contact.html">
+              <p class="text-light">Contact</p>
+            </a>
           </div>
           <div class="col-12 col-md-3">
             <div>

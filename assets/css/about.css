@@ -1,0 +1,28 @@
+:root {
+  --primary_color: #990102;
+  --secondary_color: rgb(10, 29, 53);
+  --orange_color: #f25334;
+  --white_color: rgb(255, 255, 255);
+  --background_color: #f1f3f2;
+}
+
+.company_logo_card {
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  background-color: var(--background_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.company_logo {
+  height: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.vision_image {
+  height: 700px;
+  width: 100%;
+  object-fit: cover;
+}

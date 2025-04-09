@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Poppins Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open+Sans Google Font s -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap-icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- AOS animation  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Index CSS  -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+
+    <!-- About CSS  -->
+    <link rel="stylesheet" href="assets/css/about.css" />
+
+    <!-- Service CSS  -->
+    <link rel="stylesheet" href="assets/css/service.css" />
+
+    <style>
+      .banner {
+        width: 100%; /* Adjust width as needed */
+        padding-top: 150px;
+        padding-bottom: 150px;
+        background: linear-gradient(
+            /* rgba(153, 1, 1, 0.721),
+            rgba(153, 1, 1, 0.721) */
+              rgba(10, 29, 53, 0.869),
+            rgba(10, 29, 53, 0.869)
+          ),
+          url("assets/images/kBanner.png") center center / cover no-repeat;
+      }
+
+      .growth_bg_image {
+        background-image: url("assets/images/growth01.jpg");
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .growth_02 {
+        height: 300px;
+        width: 50%;
+        object-fit: cover;
+        border-radius: 10px;
+        position: absolute;
+        bottom: -60px; /* Adjust distance from the bottom */
+        right: -50px; /* Adjust distance from the right */
+        border: 10px solid white;
+      }
+
+      /* Team style  */
+
+      .team_card {
+        background-image: url("assets/images/team_04.png");
+        height: 400px;
+        width: 100%;
+        background-size: cover;
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .team_name_card {
+        background-color: white;
+        border-radius: 10px;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        width: 80%;
+        transform: translateX(-50%);
+      }
+    </style>
+
+    <title>Khwemahle</title>
+  </head>
+  <body>
+    <!-- ======= Navbar  ======= -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light header_background fixed-top pt-3"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/images/KM_logo.png" alt="" class="navbar_image" />
+          <h6 class="mb-0 text-white fw-bold">Khwemahle</h6>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <i class="bi bi-list navbar_menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link text-light active"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button class="btn navbar_btn px-5 rounded-pill fw-bold">
+              Get In Touch
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======= Offcavas menu  ======= -->
+    <div
+      class="offcanvas offcanvas-bottom"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+        <!-- <button
+          type="button"
+          class="btn-close text-reset"
+          aria-label="Close"
+        ></button> -->
+        <a data-bs-dismiss="offcanvas">
+          <i class="bi bi-x-lg text-white close_canvas_icon"></i>
+        </a>
+      </div>
+      <div class="offcanvas-body">
+        <center>
+          <img src="assets/images/kLogo.png" alt="" class="canvas_logo mb-4" />
+        </center>
+        <a href="index.html">
+          <div class="d-flex justify-content-center mb-4">
+            <i class="bi bi-house text-white canvas_list_icon"></i>
+            <h5 class="mb-0 text-white">Home</h5>
+          </div>
+        </a>
+        <!-- end item  -->
+        <a href="about.html">
+          <div class="d-flex justify-content-center mb-4">
+            <i class="bi bi-buildings text-white canvas_list_icon"></i>
+            <h5 class="mb-0 text-white">About</h5>
+          </div>
+        </a>
+        <!-- end item  -->
+        <a href="services.html">
+          <div class="d-flex justify-content-center mb-4">
+            <i class="bi bi-gear text-white canvas_list_icon"></i>
+            <h5 class="mb-0 text-white">Services</h5>
+          </div>
+        </a>
+        <!-- end item  -->
+        <a href="contact.html">
+          <div class="d-flex justify-content-center mb-4">
+            <i class="bi bi-telephone text-white canvas_list_icon"></i>
+            <h5 class="mb-0 text-white">Contact</h5>
+          </div>
+        </a>
+        <!-- end item  -->
+      </div>
+    </div>
+
+    <!-- ======= Hero  ======= -->
+    <section class="header_background hero_card">
+      <div class="container pt-5">
+        <div class="row mb-5 overflow_content">
+          <div
+            class="col-12 col-md-6 mb-3"
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <h6 class="poppins_headings fw-bold mb-2 text-light">
+              Our Services
+            </h6>
+            <h1 class="poppins_headings fw-bold mb-4 text-white">
+              Tailored Solutions for Your Business
+            </h1>
+          </div>
+          <div
+            class="col-12 col-md-6 mb-5"
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <p class="text-white">
+              We offer a wide range of tailored solutions designed to meet the
+              unique needs of your business. From HR management and labour law
+              advice to customised training, our services are focused on driving
+              organisational success and employee development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Hero Image  ======= -->
+    <section>
+      <div class="container">
+        <img
+          src="assets/images/service_image.png"
+          alt=""
+          class="service_page_header_image shadow-sm"
+        />
+      </div>
+    </section>
+
+    <!-- ======= Services  ======= -->
+    <section class="container section_spacing overflow_content">
+      <h1
+        class="poppins_headings fw-bold mb-4"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1100"
+      >
+        Human Resources Solutions
+      </h1>
+      <p
+        class="mb-5 text-secondary"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1100"
+      >
+        Strategic HR support to optimize your workforce — from policy
+        development and performance management to recruitment, job analysis, and
+        change management. We help organizations build people-first solutions
+        that work.
+      </p>
+      <div class="row overflow_content">
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Workplace Policies and Procedures</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>
+              Talent Acquisition (skills sourcing),with specific focus on
+              technical and scarce skills
+            </p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Workplace Skills Planning and Reporting</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Performance Management</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Organisational Design and Job Analysis</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>HR Process Mapping</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Job Profiling and Evaluation</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Change Management</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Workplace Investigations</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>
+              Employee Retration (Work to Retire) - recrutment certified PEA/
+              TES
+            </p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Private Employment Agency</p>
+          </div>
+        </div>
+        <!-- end item  -->
+      </div>
+      <hr class="my-5" />
+      <!-- ===========================  -->
+      <h1
+        class="poppins_headings fw-bold mb-4 mt-5"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1100"
+      >
+        Labour Law
+      </h1>
+      <p
+        class="mb-5 text-secondary"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1100"
+      >
+        Expert legal guidance and representation for all labour-related matters
+        — including disciplinary hearings, CCMA cases, wage negotiations, and
+        collective bargaining. We protect your business while ensuring
+        compliance and fairness.
+      </p>
+      <div class="row overflow_content">
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Initiating and Presiding Grievance and Disciplinary hearings</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Legal Representation at CCMA/Bargaining Council/Labour Court</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Facilitating Wage Negotiations and Retrenchments</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Labour Law Advice/Opinion</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Collective Bargaining</p>
+          </div>
+        </div>
+        <!-- end item  -->
+      </div>
+      <hr class="my-5" />
+      <!-- ===========================  -->
+      <h1
+        class="poppins_headings fw-bold mb-4 mt-5"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1100"
+      >
+        Workplace Training
+      </h1>
+      <p
+        class="mb-5 text-secondary"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1100"
+      >
+        Empowering your teams with tailored training solutions. We develop and
+        deliver courses in employment equity, health & safety, labour law, and
+        more — helping you build a knowledgeable and compliant workforce.
+      </p>
+      <div class="row">
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Employment Equity</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Health and Safety</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Labour Relations</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Basic Conditions of Employment</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Skills Development</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Industry Specified Collective Agreements</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Workplace Discipline</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>CCMA or Bargaining Council Dispute Resolution</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Negotiations and Consultation Skills</p>
+          </div>
+        </div>
+        <!-- end item  -->
+        <div
+          class="col-12 col-md-6 mb-2"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1500"
+        >
+          <div class="d-flex">
+            <i class="bi bi-arrow-right-circle-fill service_list_icon"></i>
+            <p>Stakeholder Relations (RBO)</p>
+          </div>
+        </div>
+        <!-- end item  -->
+      </div>
+    </section>
+
+    <!-- ======= Courses  ======= -->
+    <section class="section_spacing container">
+      <div class="skills_card p-5">
+        <h4 class="poppins_headings text-light fw-bold">
+          Custom Training Solutions
+        </h4>
+        <p class="mb-4 text-white">
+          We design and facilitate tailored short courses and soft skills
+          training to meet your organisation’s specific needs.
+        </p>
+        <hr class="my-5 bg-white" />
+
+        <div class="row">
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Supervisory</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Management and Leadership training</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Organisational Development/Design</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Transformational Leadership</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Change Management</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Conflict Management</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Strategic Management</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Personal Development</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Coaching</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Problem-solving</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Employee Wellness</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Executive Coaching</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">Mentoring</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div class="col-12 col-md-6 mb-2">
+            <div class="d-flex">
+              <i class="bi bi-chevron-right text-light service_list_icon"></i>
+              <p class="text-light">
+                Any employee, leadership and organisational developmental
+                requirements
+              </p>
+            </div>
+          </div>
+          <!-- end item  -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Banner  ======= -->
+    <section class="section_spacing banner overflow_content">
+      <div
+        class="container"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1500"
+      >
+        <center>
+          <h1 class="poppins_headings mb-4 text-white fw-bold">
+            Get in Touch with Us
+          </h1>
+          <p class="text-white">
+            We’re here to help! Reach out today to learn more about how our
+            tailored solutions can support your organisation’s growth and
+            success. We look forward to collaborating with you.
+          </p>
+          <a href="contact.html">
+            <button
+              class="btn navbar_btn px-5 rounded-pill fw-bold bg-light text-dark mt-5"
+            >
+              Get In Touch
+            </button>
+          </a>
+        </center>
+      </div>
+    </section>
+
+    <!-- ======= Footer  ======= -->
+    <section class="footer_container">
+      <hr class="text-light mb-5" />
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md mb-5">
+            <h6 class="poppins_headings fw-bold text-white">About Company</h6>
+            <p class="text-light">
+              Khwemahle is a proudly South African consultancy specialising in
+              HR, Labour Law, and Workplace Training. We’re dedicated to driving
+              transformation and empowering organisations through tailored,
+              results-driven solutions.
+            </p>
+            <div class="d-flex mt-5">
+              <i class="bi bi-whatsapp footer_icons"></i>
+              <i class="bi bi-linkedin footer_icons"></i>
+              <i class="bi bi-facebook footer_icons"></i>
+              <i class="bi bi-instagram footer_icons"></i>
+            </div>
+          </div>
+          <!-- end col  -->
+          <div class="col-12 col-md mb-5">
+            <h6 class="poppins_headings fw-bold text-white">Quick Links</h6>
+            <a href="index.html">
+              <p class="text-light">Home</p>
+            </a>
+            <a href="about.html">
+              <p class="text-light">About</p>
+            </a>
+            <a href="services.html">
+              <p class="text-light">Services</p>
+            </a>
+            <a href="contact.html">
+              <p class="text-light">Contact</p>
+            </a>
+          </div>
+          <div class="col-12 col-md-3">
+            <div>
+              <center>
+                <img src="assets/images/kLogo.png" alt="" class="footer_logo" />
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="text-light mt-4" />
+    </section>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Animation Scripts start  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Animation Scripts end  -->
+  </body>
+</html>

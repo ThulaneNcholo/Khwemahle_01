@@ -1,0 +1,27 @@
+:root {
+  --primary_color: #990102;
+  --secondary_color: rgb(10, 29, 53);
+  --orange_color: #f25334;
+  --white_color: rgb(255, 255, 255);
+  --background_color: #f1f3f2;
+}
+
+.service_page_header_image {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: -100px;
+}
+
+.service_list_icon {
+  color: var(--primary_color);
+  margin-right: 10px;
+}
+
+.skills_card {
+  background-color: var(--primary_color);
+  border-radius: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
