@@ -315,13 +315,19 @@
             <h3 class="poppins_headings fw-bold text-white">
               Get in touch with us today
             </h3>
-            <form action="" class="mt-4">
+            <form
+              action="https://formsubmit.co/precious@khwemahle.co.za"
+              method="POST"
+              autocomplete="off"
+              class="mt-4"
+            >
               <div class="form-floating mb-4">
                 <input
                   type="text"
                   class="form-control form_input"
                   id="floatingInput"
                   placeholder="Enter your name"
+                  name="name"
                 />
                 <label for="floatingInput">Enter your name</label>
               </div>
@@ -331,6 +337,7 @@
                   class="form-control form_input"
                   id="floatingInput"
                   placeholder="name@example.com"
+                  name="email"
                 />
                 <label for="floatingInput">Email address</label>
               </div>
@@ -343,9 +350,18 @@
                 <textarea
                   class="form-control form_input"
                   id="exampleFormControlTextarea1"
+                  name="message"
                   rows="4"
                 ></textarea>
               </div>
+              <center>
+                <button
+                  type="submit"
+                  class="btn btn-light rounded-pill px-5 mt-4"
+                >
+                  submit form
+                </button>
+              </center>
             </form>
           </div>
         </div>
